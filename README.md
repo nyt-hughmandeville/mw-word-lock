@@ -51,6 +51,7 @@ See the [Next.js setup doc](https://nextjs.org/learn/basics/deploying-nextjs-app
 
 ```sh
 npx create-next-app@latest client --use-pnpm --js --app
+npm install -g serve
 ```
 
 ## React Strict Mode
