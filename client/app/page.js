@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react'
 import styles from './page.module.css'
-import { words } from '../data/words.js'
+import { words } from '/data/words.js'
 
 const Page = () => {
   const [letters, setLetters] = useState([])
