@@ -1,0 +1,98 @@
+.title {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 32px;
+  font-weight: 400;
+  font-family:
+    nyt-karnak,
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+
+.buttons {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+div .button {
+  display: inline-block;
+  font-size: 32px;
+  color: #bdbdbd;
+  cursor: pointer;
+  margin-left: 20px;
+}
+.button:hover {
+  color: #ffffff;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+  color: #ffffff;
+  background: #121212;
+  font-size: 16px;
+  margin: 0 auto;
+  height: 100vh; /* Added to vertically center the content */
+  user-select: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 10px;
+  width: min-content;
+}
+
+.cell {
+  justify-content: center;
+  font-size: 32px;
+  color: #ffffff;
+  font-weight: 700;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+  width: 80px;
+  height: 80px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.cell:nth-child(-n + 5),
+.cell:nth-child(n + 21):nth-child(-n + 25) {
+  opacity: 0.2;
+}
+.cell:nth-child(n + 6):nth-child(-n + 10),
+.cell:nth-child(n + 16):nth-child(-n + 20) {
+  opacity: 0.4;
+}
+
+.letter {
+  background: #3a3a3c;
+  font-family:
+    nyt-franklin,
+    system-ui,
+    -apple-system,
+    sans-serif;
+  text-transform: uppercase;
+  user-select: none;
+  cursor: pointer;
+}
+
+.correct {
+  background: #618c55;
+}
+
+.partial {
+  background: #b1a04c;
+}
