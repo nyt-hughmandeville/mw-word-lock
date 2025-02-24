@@ -61,8 +61,8 @@ div .button {
     system-ui,
     -apple-system,
     sans-serif;
-  width: 80px;
-  height: 80px;
+  width: 8vw;
+  height: 12vh;
   justify-content: center;
   align-items: center;
   display: flex;
