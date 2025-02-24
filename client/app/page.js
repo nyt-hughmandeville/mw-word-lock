@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react'
 import styles from './page.module.css'
-import { words } from '/data/words.js'
+import { words } from '../data/words.js'
 
 const Page = () => {
   const [letters, setLetters] = useState([])
@@ -24,6 +24,7 @@ const Page = () => {
 
     // Set the word's letters in random rows.
     for (let i = 0; i < rls.length; i++) {
+      // TBD: don't set if the letter is already in the row.
       const rowIndex = Math.floor(Math.random() * 5)
       ltrs[rowIndex][i] = rls[i]
     }
@@ -79,13 +80,28 @@ const Page = () => {
 
   // Generate 5x5 grid of random letters.
   const randomLetters = () => {
-    const alphabet = 'abcdefghijklmnopqrstuvwxyz'
-    return Array.from({ length: 5 }, () =>
-      Array.from(
-        { length: 5 },
-        () => alphabet[Math.floor(Math.random() * alphabet.length)]
-      )
-    )
+    let arr = new Array(5).fill(null).map(() => new Array(5).fill(''))
+    for (let ci = 0; ci < 5; ci++) {
+      const chars = get5RandomLetters()
+      arr[0][ci] = chars[0]
+      arr[1][ci] = chars[1]
+      arr[2][ci] = chars[2]
+      arr[3][ci] = chars[3]
+      arr[4][ci] = chars[4]
+    }
+    return arr
+  }
+
+  // Get 5 random letters that are unique.
+  const get5RandomLetters = () => {
+    const alphabet =
+      'aaaaaaaabbccccdddeeeeeeeeeeeffgghhhiiiiiiijklllllmmmnnnnnnnooooooopppqrrrrrrrsssssstttttttuuuuvwxyyz'
+
+    let uniqueLetters = new Set()
+    while (uniqueLetters.size < 5) {
+      uniqueLetters.add(alphabet[Math.floor(Math.random() * alphabet.length)])
+    }
+    return Array.from(uniqueLetters)
   }
 
   // Check if the word in the row is valid.
