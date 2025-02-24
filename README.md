@@ -60,7 +60,6 @@ Add `reactStrictMode: false` to next.config.mjs to turn off React Strict Mode.
 
 ## To Do
 
-- Setup GH page.
 - Have each column have unique letters.
 - Support arrow keys.
 - Make look good on mobile.
