@@ -13,12 +13,12 @@ help:
 .PHONY: build
 ## build: Build React client code.
 build:
-	cd client; pnpm run build
+	cd client; npm run build
 
 .PHONY: deploy
 ## deploy: Deploy Next.js code.
 deploy:
-	cd client; pnpm deploy
+	cd client; npm deploy
 
 ## :
 ## DEPENDENCIES:
@@ -32,12 +32,12 @@ dep-clean:
 .PHONY: dep-get
 ## dep-get: Get Node modules.
 dep-get:
-	cd client; pnpm install
+	cd client; npm install
 
 .PHONY: dep-update
 ## dep-update: Update Node modules.
 dep-update:
-	cd client; pnpm upgrade
+	cd client; npm upgrade
 
 ## :
 ## RUN:
@@ -46,7 +46,7 @@ dep-update:
 ## run: Run Next.js locally (on port 3000).
 run:
 	@echo "http://localhost:3000/"
-	@cd client && pnpm dev
+	@cd client && npm run dev
 
 .PHONY: run-static
 ## run-static: Run static site in out dir locally (on port 3000).

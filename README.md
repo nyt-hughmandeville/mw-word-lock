@@ -41,8 +41,8 @@ make dep-update
 
 ```sh
 cd client
-pnpm add gh-pages
-pnpm add --save-dev prettier
+npm add gh-pages
+npm add --save-dev prettier
 ```
 
 ## Project Setup
@@ -50,7 +50,7 @@ pnpm add --save-dev prettier
 See the [Next.js setup doc](https://nextjs.org/learn/basics/deploying-nextjs-app/setup).
 
 ```sh
-npx create-next-app@latest client --use-pnpm --js --app
+npx create-next-app@latest client --use-npm --js --app
 npm install -g serve
 ```
 
